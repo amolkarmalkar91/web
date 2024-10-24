@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*scroll bar */
+::-webkit-scrollbar{
+    width: 10px;
+    background:#f9f6f0;
+    color: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:  tomato;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/*.navbar{
+    padding: 18px 18px;
+}*/
+
+/*default settings*/
+section{
+    padding: 5px 1rem 23px 1rem;
+    padding-right: 12px;
+    margin-bottom: -1px;
+    width: 100%;
+    overflow: hidden;
+}
+img{
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    vertical-align: middle;
+}
+h1{
+    font-size: 48px;
+     font-weight: 500;
+     color: #2c2c2c;
+     line-height: 1.2;
+}
+h2{
+    color: #2c2c2c;
+}
+h3{
+    font-family: 'cookie',sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 34px;
+    margin-bottom: 15px;
+    line-height: 28px;
+    color: #ed2433;
+}
+h4{
+    color: #2c2c2c;
+    line-height: 1.8;
+    font-size: 24px;
+}
+h5{
+    color:#ed2433;
+    font-size: 20px;
+}
+p{
+    padding: 5px 0;
+    font-size: 18px;
+    color: #353535;
+    line-height: 28px;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+#navbar{
+    position: absolute;
+    top: 45px;
+    left:15px;
+    right:12px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    height: 5.5rem;
+    margin: 0.4rem;
+    border-radius: 60px;
+    justify-content: space-between;
+    padding: 55px 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 4px hsla(0, 0%,0,0.2);
+}
+
+.cart-btn, .user-btn {
+    color: #fff;
+}
+
+.nav-btns {
+    position: absolute;
+    justify-content: space-between;
+    /*background-color: #2c2c2c;*/
+    margin-left:70%;
+    gap: 28px; /* Space between the cart and user icons */
+    align-items: center;
+  
+}
+
+.navbar-brand img {
+    
+    margin-bottom: 20px;
+    height: 135px;
+    width: 137px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.nav-item{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 25px;
+}
+
+#homeitem,
+.nav-item .nav-link{
+    color:white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item .nav-link:hover{
+    color:yellow;
+    background-color:#2c2c2c;
+    font-size: 26px;
+
+}
+#homeitem:hover{
+color: yellow;
+ background-color:#2c2c2c;
+    font-size: 26px;
+
+}
+.navbar-toggler-icon,span navbar-toggler-icon{
+    color: #fff;
+    background-color: white;
+    font-size: 24px;
+    margin-bottom: 32px;
+
+}
+
+
+/*.nav-item .nav-link i {
+    margin-right: 8px;
+}
+.nav-btns {
+    display: flex;
+    
+}*/
+
+.cart-btn, .user-btn {
+    color: #fff;
+    font-size: 45px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+ .user-btn:hover {
+    font-size: 50px;
+}
+.cart-btn:hover{
+    font-size: 50px;
+}
+.dropdown-item{
+    font-size: 25px;
+}
+.dropdown-item:hover{
+   
+    font-size: 28px;
+  
+}
+#navbar.fixed{
+    padding: 0 4.5rem;
+    margin: 0;
+    position: fixed;
+    top:0;
+    border-radius: 0;
+    height: 4rem;
+    background-color: blanchedalmond;
+}
+#navbar.scrolled {
+    background-color: pink !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Contact us*/
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(bg.jpg);
+    background-size: cover;
+   
+    
+}
+
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+    margin-top: -55px;
+    margin-bottom: 50px;
+}
+
+.contact .content h2{
+    font-size: 68px;
+    font-weight: 700;
+    color: #fff;
+   margin-left: 139px;
+    margin-top: 70px;
+    font-size:50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    margin-bottom: -22px;
+}
+.contact .content p{
+    
+    font-weight: 500;
+    color: #fff;
+   
+    
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    /*flex-direction: column;*/
+}
+.container .contactinfoglass-effect {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: -487px;
+    margin-top: -70px;
+    margin-right: 196px;
+    padding-right: 200px;
+
+}
+
+.container .contactinfoglass-effect .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactinfoglass-effect .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactinfoglass-effect .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactinfoglass-effect .box .text h3{
+    font-weight: 500;
+    color:fff;
+}
+.container .contactinfoglass-effect .box .text p{
+    color:#fff;
+    font-size: 25px;
+}
+
+    .contactform {
+        width: 40%;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.1); /* Light, semi-transparent background */
+        backdrop-filter: blur(10px); /* Blur effect to achieve glassmorphism */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        border-radius: 15px; /* Rounded corners for a smooth look */
+        border: 5px solid rgb(236, 235, 235); /* Border to enhance glass effect */
+        z-index: 1;
+        margin-left: -180px;
+        margin-top: 58px;
+        margin-right: -279px;
+    }
+    
+
+.contactform h2{
+    font-size: 35px;
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+}
+.contactform .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputBox input,
+.contactform .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 25px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputBox span{
+    position: relative;
+    left: 0;
+    padding: 5px 0;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:black;
+}
+.contactform .inputBox  input:focus ~ span,
+.contactform .inputBox  input:valid ~ span,
+.contactform .inputBox  textarea:focus ~ span,
+.contactform .inputBox  textarea:valid ~ span
+{
+    color:#5b2d2f;
+    font-size:38px;
+    transform: translateY(-80px);
+    font-family:sans-serif;
+}
+
+.contactform .inputBox input[type="submit"]{
+    width: 100px;
+    background: #ff1677;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 22px;
+
+}
+.contactform .inputBox input[type="submit"]:hover{
+    font-size: 30px;
+}
+
+
+
+
+.contactinfoglass-effect {
+    position: relative;
+    background-color:#C4A484 hsl(30, 35%, 64%)
+    ; /* Semi-transparent background color */
+    backdrop-filter: blur(10px); /*Adjust the blur level to your preference */
+    border-radius: 10px; /* Optional: gives rounded corners */
+    box-shadow: 0 4px 8px rgba(207, 177, 177, 0.444); /* Optional: adds a subtle shadow */
+    padding: 20px;  /*Optional: padding inside the glass container */
+    border: 1px solid rgba(239, 226, 226, 0.753); /*Optional: a subtle border to enhance the glass effect */
+}
+
+footer {
+    background-color:rgba(91,45,47,1);
+    color: white;
+    padding: 20px 0;
+    margin-top: -20px;
+    text-align: center;
+  }
+  .footer-section  p{
+    color: #e6b222;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    margin: 20px;
+  }
+  
+  .footer-section h3 {
+    color: #e6b222;
+  }
+  
+  .footer-bottom {
+    margin-bottom: 30px;
+    
+  }
+
+  .footer-bottom p{
+    color: #e6b222;
+  }
+  
+  a {
+    color: #e6b222;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #e6b222;
+  }
+ 

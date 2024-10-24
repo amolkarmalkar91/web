@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="newstyle.css">
+    <style>
+        /* Removed container-fluid custom width and height to avoid restrictions */
+        .dashboard-container {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+        }
+        .dashboard-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .btn-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .dashboard-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            margin-top: 200px;
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .dashboard-button:hover {
+            background-color: #45a049;
+        }
+        body {
+            background: url(bg.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*scroll bar */
+::-webkit-scrollbar{
+    width: 10px;
+    background:#f9f6f0;
+    color: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:  tomato;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/*.navbar{
+    padding: 18px 18px;
+}*/
+
+/*default settings*/
+section{
+    padding: 5px 1rem 23px 1rem;
+    padding-right: 12px;
+    margin-bottom: -1px;
+    width: 100%;
+    overflow: hidden;
+}
+img{
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    vertical-align: middle;
+}
+h1{
+    font-size: 48px;
+     font-weight: 500;
+     color: #fff1f1;
+     line-height: 1.2;
+     margin-left: 12px;
+     line-height: 1.2;
+     margin-right: 10px;
+}
+h2{
+    color: #2c2c2c;
+}
+h3{
+    font-family: 'cookie',sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 34px;
+    margin-bottom: 15px;
+    line-height: 28px;
+    color: #ed2433;
+}
+h4{
+    color: #2c2c2c;
+    line-height: 1.8;
+    font-size: 24px;
+}
+h5{
+    color:#ed2433;
+    font-size: 20px;
+}
+
+.navbar-brand img {
+            max-width: 100px; /* Adjust logo size */
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            color: #fff; /* White text for better contrast */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ddd; /* Slight hover effect */
+        }
+        /* Body styling */
+        body {
+            background: url(bg.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        .btn-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .dashboard-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 36px;
+            border: none;
+            margin-top: 80%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left:-300%;
+            margin-right: -66%;
+        }
+        .dashboard-button:hover {
+            background-color: #45a049;
+        }
+p{
+    padding: 5px 0;
+    font-size: 18px;
+    color: #353535;
+    line-height: 28px;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+#navbar{
+    position: absolute;
+    top: 45px;
+    left:15px;
+    right:12px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    height: 5.5rem;
+    margin: 0.4rem;
+    border-radius: 60px;
+    justify-content: space-between;
+    padding: 55px 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 4px hsla(0, 0%,0,0.2);
+}
+
+
+
+.nav-btns {
+    position: absolute;
+    justify-content: space-between;
+    /*background-color: #2c2c2c;*/
+    margin-left:70%;
+    gap: 28px; /* Space between the cart and user icons */
+    align-items: center;
+  
+}
+
+.navbar-brand img {
+    
+    margin-bottom: 20px;
+    height: 82px;
+    width: 137px;
+    margin-top: -42px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.nav-item{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 25px;
+    margin-top: -70px;
+}
+
+#homeitem,
+.nav-item .nav-link{
+    color:white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item .nav-link:hover{
+    color:yellow;
+    background-color:#2c2c2c;
+    font-size: 26px;
+
+}
+#homeitem:hover{
+color: yellow;
+ background-color:#2c2c2c;
+    font-size: 26px;
+
+}
+.navbar-toggler-icon,span navbar-toggler-icon{
+    color: #fff;
+    background-color: white;
+    font-size: 24px;
+    margin-bottom: 32px;
+
+}
+
+
+ .user-btn:hover {
+    font-size: 50px;
+}
+.cart-btn:hover{
+    font-size: 50px;
+}
+.dropdown-item{
+    font-size: 25px;
+}
+.dropdown-item:hover{
+   
+    font-size: 28px;
+  
+}
+#navbar.fixed{
+    padding: 0 4.5rem;
+    margin: 0;
+    position: fixed;
+    top:0;
+    border-radius: 0;
+    height: 4rem;
+    background-color: blanchedalmond;
+}
+#navbar.scrolled {
+    background-color: pink !important;
+    transition: background-color 0.3s ease;
+}
+
+
+    </style>
+    <!-- fontawesome CSS -->
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="whatever.png" alt="Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active"  id="homeitem"    aria-current="page" href="new.html">Home</a>
+          </li>
+
+          
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Sign In/ Sign Up</a>
+          </li>
+
+            </a>
+            
+      </div>
+     
+      
+    </div>
+</nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <h1>DASHBOARD</h1>
+    </div>
+
+    <h1> T20 World Cup 2024 Dashboard!</h1>
+    <!-- Button -->
+    <div class="btn-container">
+        <button class="dashboard-button" onclick="window.location.href='https://app.powerbi.com/view?r=eyJrIjoiMDAzYTU5ZmQtMjY3Mi00Y2UxLTgzNjUtOTIzYTQ2NTVlYjdkIiwidCI6IjM4ZjkwNGZkLWFmODktNDA2OC05ZTdhLTg0YTEzZWJkOTZhMiJ9';">
+            Go to Power BI Dashboard
+        </button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery JS Bundle -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</body>
+</html>
